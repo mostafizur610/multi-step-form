@@ -51,16 +51,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 src/
 ├── app/
-│ ├── layout.tsx # Root layout with providers
-│ ├── page.tsx # Main page with the form
-│ └── providers.tsx # React Query provider
-├── components/
-│ ├── MultiStepForm.tsx # Main form component
-│ └── form-steps/ # Individual form steps
+│ ├── layout.tsx            # Root layout with providers
+│ ├── page.tsx              # Main page with the form
+│ └── providers.tsx         # React Query provider
+├── components/ 
+│ ├── MultiStepForm.tsx     # Main form component
+│ └── form-steps/           # Individual form steps
 │ ├── PersonalInfoStep.tsx
 │ ├── AddressDetailsStep.tsx
 │ ├── AccountSetupStep.tsx
 │ └── FormSummary.tsx
 ├── types/
-│ └── form.ts # Zod schemas and types
-└── app/globals.css # Global styles
+│ └── form.ts               # Zod schemas and types
+└── app/globals.css         # Global styles
