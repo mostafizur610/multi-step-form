@@ -1,6 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Multi-Step Form with Next.js
 
-## Getting Started
+A responsive multi-step form with validation, dark mode support, and simulated API submission built with:
+
+- Next.js (App Router)
+- React Hook Form + Zod for form handling and validation
+- TailwindCSS for styling
+- React Query for API simulation
+- TypeScript for type safety
+
+## Features
+
+✅ Multi-step form navigation with progress indicator  
+✅ Field validation with Zod schema validation  
+✅ Error messages for invalid fields  
+✅ Dark mode toggle  
+✅ Responsive design for all screen sizes  
+✅ Form data summary before submission  
+✅ Simulated API submission with React Query  
+✅ Type-safe form state management
+
+## Prerequisites
+
+- Node.js (v18 or later recommended)
+- npm (v9 or later) or yarn
+- Git (optional)
+
+## Installation
+
+1. **Clone the repository** (or create a new project):
+
+````bash
+git clone https://github.com/mostafizur610/multi-step-form.git
+cd multi-step-form
 
 First, run the development server:
 
@@ -12,25 +43,24 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/
+├── app/
+│ ├── layout.tsx # Root layout with providers
+│ ├── page.tsx # Main page with the form
+│ └── providers.tsx # React Query provider
+├── components/
+│ ├── MultiStepForm.tsx # Main form component
+│ └── form-steps/ # Individual form steps
+│ ├── PersonalInfoStep.tsx
+│ ├── AddressDetailsStep.tsx
+│ ├── AccountSetupStep.tsx
+│ └── FormSummary.tsx
+├── types/
+│ └── form.ts # Zod schemas and types
+└── app/globals.css # Global styles
