@@ -37,7 +37,10 @@ const MultiStepForm = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const methods = useForm<FormValues>({
-    resolver: zodResolver(steps[currentStep].schema),
+    resolver:
+      currentStep < steps.length - 1
+        ? zodResolver(steps[currentStep].schema as never)
+        : undefined,
     mode: "onChange",
   });
 

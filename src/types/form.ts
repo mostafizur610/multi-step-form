@@ -25,6 +25,6 @@ export const accountSetupSchema = z
 
 export const formSchema = personalInfoSchema
   .merge(addressDetailsSchema)
-  .merge(accountSetupSchema);
+  .merge(accountSetupSchema._def.schema);
 
 export type FormValues = z.infer<typeof formSchema>;
