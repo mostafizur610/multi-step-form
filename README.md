@@ -33,7 +33,13 @@ A responsive multi-step form with validation, dark mode support, and simulated A
 git clone https://github.com/mostafizur610/multi-step-form.git
 cd multi-step-form
 
-First, run the development server:
+1. **Install dependencies**:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -43,7 +49,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-````
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -51,16 +57,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 src/
 ├── app/
-│ ├── layout.tsx            # Root layout with providers
-│ ├── page.tsx              # Main page with the form
-│ └── providers.tsx         # React Query provider
-├── components/ 
-│ ├── MultiStepForm.tsx     # Main form component
-│ └── form-steps/           # Individual form steps
+│ ├── layout.tsx # Root layout with providers
+│ ├── page.tsx # Main page with the form
+│ └── providers.tsx # React Query provider
+├── components/
+│ ├── MultiStepForm.tsx # Main form component
+│ └── form-steps/ # Individual form steps
 │ ├── PersonalInfoStep.tsx
 │ ├── AddressDetailsStep.tsx
 │ ├── AccountSetupStep.tsx
 │ └── FormSummary.tsx
 ├── types/
-│ └── form.ts               # Zod schemas and types
-└── app/globals.css         # Global styles
+│ └── form.ts # Zod schemas and types
+└── app/globals.css # Global styles
+````
